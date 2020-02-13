@@ -1,0 +1,48 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ╔╦╗╦═╗╔═╗╦  ╦╦╔═╗ ┬ ┬┌┬┐┬                           #
+#    ║ ╠╦╝╠═╣╚╗╔╝║╚═╗ └┬┘││││                           #
+#  o ╩ ╩╚═╩ ╩ ╚╝ ╩╚═╝o ┴ ┴ ┴┴─┘                         #
+#                                                       #
+# This file configures Travis CI.                       #
+# (i.e. how we run the tests... mainly)                 #
+#                                                       #
+# https://docs.travis-ci.com/user/customizing-the-build #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+language: node_js
+
+node_js:
+  - "4"
+  - "6"
+  - "8"
+  - "node"
+
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    - ci@sailsjs.com
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#   ╔═╗╦ ╦╔═╗╔╦╗╔═╗╔╦╗┬┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐              #
+#   ║  ║ ║╚═╗ ║ ║ ║║║║│┌─┘├─┤ │ ││ ││││└─┐              #
+#   ╚═╝╚═╝╚═╝ ╩ ╚═╝╩ ╩┴└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘              #
+#                                                       #
+# Custom stuff specific to this package:                #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+sudo: false
+
+services:
+  - sqmcmd
+env:
+  - DB_USER=mp DB_PASS='mp'
+
+before_script:
+  - sqlcmd -q 'create database mppg;'
+  - sqlcmd -q "create user 'mp'@'localhost' identified by 'mp';"
+  - sqlcmd -q "grant all privileges on * . * to 'mp'@'localhost';" -u root
+  - sqlcmd -q "flush privileges;" -u root
