@@ -97,7 +97,7 @@ describe('Queryable ::', function () {
           if (err) {
             return done(err);
           }
-          assert(_.isArray(report.result.recordset));
+          assert(_.isArray(report.result.rows));
           return done();
         });
     });

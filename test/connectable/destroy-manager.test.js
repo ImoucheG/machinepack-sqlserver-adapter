@@ -1,12 +1,12 @@
 var assert = require('assert');
 var Pack = require('../../');
 
-describe('Connectable ::', function() {
-  describe('Destroy Manager', function() {
+describe('Connectable ::', function () {
+  describe('Destroy Manager', function () {
     var manager;
 
     // Create a manager
-    before(function(done) {
+    before(function (done) {
       Pack.createManager({
         connectionConfig: {
           user: 'mp',
@@ -15,25 +15,25 @@ describe('Connectable ::', function() {
           database: 'mppg',
         }
       })
-      .exec(function(err, report) {
-        if (err) {
-          return done(err);
-        }
+        .exec(function (err, report) {
+          if (err) {
+            return done(err);
+          }
 
-        manager = report.manager;
-        return done();
-      });
+          manager = report.manager;
+          return done();
+        });
     });
 
 
-    it('should successfully destroy the manager', function(done) {
+    it('should successfully destroy the manager', function (done) {
       Pack.destroyManager({
         manager: manager
       })
-      .exec(function(err) {
-        assert(!err);
-        return done();
-      });
+        .exec(function (err) {
+          assert(!err);
+          return done();
+        });
     });
   });
 });

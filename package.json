@@ -1,14 +1,47 @@
 {
-  "name": "machinepack-sqlserver",
-  "version": "1.0.0",
-  "description": "Structured Node.js bindings for SQL Server.",
-  "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha --recursive --timeout 10000",
-    "fasttest": "node ./node_modules/mocha/bin/mocha --recursive --timeout 10000",
-    "pretest": "npm run lint",
-    "lint": "node ./node_modules/eslint/bin/eslint . --max-warnings=0",
-    "docker": "docker-compose run adapter bash"
+  "_from": "git+https://github.com/ImoucheG/machinepack-sqlserver.git",
+  "_id": "machinepack-sqlserver@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/machinepack-sqlserver",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "machinepack-sqlserver@git+https://github.com/ImoucheG/machinepack-sqlserver.git",
+    "name": "machinepack-sqlserver",
+    "escapedName": "machinepack-sqlserver",
+    "rawSpec": "git+https://github.com/ImoucheG/machinepack-sqlserver.git",
+    "saveSpec": "git+https://github.com/ImoucheG/machinepack-sqlserver.git",
+    "fetchSpec": "https://github.com/ImoucheG/machinepack-sqlserver.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "/sails-sqlserver-v2"
+  ],
+  "_resolved": "git+https://github.com/ImoucheG/machinepack-sqlserver.git#27ffcb16745cfd0b795d7b272cce43f6a5d76a92",
+  "_spec": "machinepack-sqlserver@git+https://github.com/ImoucheG/machinepack-sqlserver.git",
+  "_where": "D:\\developments\\TestSQLSERVER\\node_modules\\sails-sqlserver-v2",
+  "author": {
+    "name": "ImoucheG"
+  },
+  "bugs": {
+    "url": "https://github.com/imoucheg/machinepack-sqlserver/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@sailshq/lodash": "^3.10.2",
+    "debug": "2.6.9",
+    "machine": "^15.0.0",
+    "mssql": "^6.0.1",
+    "waterline-sql-builder": "^1.0.0-2"
+  },
+  "deprecated": false,
+  "description": "Structured Node.js bindings for SQL Server.",
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "mocha": "3.0.2"
+  },
+  "homepage": "https://github.com/imoucheg/machinepack-sqlserver#readme",
   "keywords": [
     "sqlserver",
     "driver",
@@ -17,19 +50,7 @@
     "machines",
     "machinepack"
   ],
-  "author": "ImoucheG",
   "license": "MIT",
-  "dependencies": {
-    "debug": "2.6.9",
-    "@sailshq/lodash": "^3.10.2",
-    "machine": "^15.0.0",
-    "mssql": "^6.0.1",
-    "waterline-sql-builder": "^1.0.0-2"
-  },
-  "devDependencies": {
-    "eslint": "4.19.1",
-    "mocha": "3.0.2"
-  },
   "machinepack": {
     "friendlyName": "SQLServer",
     "machineDir": "lib/",
@@ -49,8 +70,17 @@
       "transactional": "1.0"
     }
   },
+  "name": "machinepack-sqlserver",
   "repository": {
     "type": "git",
-    "url": "git@github.com:imoucheg/machinepack-sqlserver.git"
-  }
+    "url": "git+ssh://git@github.com/imoucheg/machinepack-sqlserver.git"
+  },
+  "scripts": {
+    "docker": "docker-compose run adapter bash",
+    "fasttest": "node ./node_modules/mocha/bin/mocha --recursive --timeout 10000",
+    "lint": "node ./node_modules/eslint/bin/eslint . --max-warnings=0",
+    "pretest": "npm run lint",
+    "test": "node ./node_modules/mocha/bin/mocha --recursive --timeout 10000"
+  },
+  "version": "1.0.0"
 }
