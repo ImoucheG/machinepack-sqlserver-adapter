@@ -34,17 +34,17 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@sailshq/lodash": "^3.10.2",
-    "debug": "2.6.9",
-    "machine": "^15.0.0",
-    "mssql": "^6.0.1",
-    "waterline-sql-builder": "^1.0.0-2"
+    "@sailshq/lodash": "^3.10.4",
+    "debug": "4.1.1",
+    "machine": "^15.2.2",
+    "mssql": "^6.1.0",
+    "waterline-sql-builder": "^1.0.0"
   },
   "deprecated": false,
   "description": "Structured Node.js bindings for SQL Server.",
   "devDependencies": {
-    "eslint": "4.19.1",
-    "mocha": "3.0.2"
+    "eslint": "6.8.0",
+    "mocha": "7.0.1"
   },
   "homepage": "https://github.com/imoucheg/machinepack-sqlserver-adapter#readme",
   "keywords": [
