@@ -1,6 +1,6 @@
 {
-  "_from": "machinepack-sqlserver-adapter@^1.0.3",
-  "_id": "machinepack-sqlserver-adapter@1.0.3",
+  "_from": "machinepack-sqlserver-adapter@^1.0.4",
+  "_id": "machinepack-sqlserver-adapter@1.0.4",
   "_inBundle": false,
   "_integrity": "sha512-iFpJ5xhYYhdm//pkrwl8T70Xot6GwK52BBkGGc1XafATTd2wUIBUhK0iZwQfuYup94yZHw9zV/t0bR/qoWanYA==",
   "_location": "/machinepack-sqlserver-adapter",
@@ -87,5 +87,5 @@
     "pretest": "npm run lint",
     "test": "node ./node_modules/mocha/bin/mocha --recursive --timeout 10000"
   },
-  "version": "1.0.3"
+  "version": "1.0.4"
 }
