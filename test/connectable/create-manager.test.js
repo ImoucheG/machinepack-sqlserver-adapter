@@ -10,6 +10,9 @@ describe('Connectable ::', function () {
           password: 'mp',
           host: '127.0.0.1\\SQLEXPRESS',
           database: 'mppg',
+          options: {
+            encrypt: false
+          }
         }
       })
         .exec(function (err) {
@@ -27,6 +30,9 @@ describe('Connectable ::', function () {
           password: 'mp',
           host: '127.0.0.1\\SQLEXPRESS',
           database: 'mppg',
+          options: {
+            encrypt: false
+          }
         }
       })
         .exec(function (err, report) {

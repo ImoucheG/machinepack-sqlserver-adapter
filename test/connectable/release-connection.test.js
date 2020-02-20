@@ -14,6 +14,9 @@ describe('Connectable ::', function () {
           password: 'mp',
           host: '127.0.0.1\\SQLEXPRESS',
           database: 'mppg',
+          options: {
+            encrypt: false
+          }
         }
       })
         .exec(function (err, report) {
@@ -55,7 +58,6 @@ describe('Connectable ::', function () {
           }
           // If the connection was successfully released the _allConnections and the
           // _freeConnections should be equal.
-          // https://github.com/mysqljs/mysql/blob/master/lib/Pool.js
           var poolSize = manager.pool.size;
           var freeConnectionsPostRelease = manager.pool.available;
 
