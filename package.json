@@ -1,6 +1,6 @@
 {
-  "_from": "machinepack-sqlserver-adapter@^1.1.5",
-  "_id": "machinepack-sqlserver-adapter@1.1.5",
+  "_from": "machinepack-sqlserver-adapter@^1.1.6",
+  "_id": "machinepack-sqlserver-adapter@1.1.6",
   "_inBundle": false,
   "_integrity": "sha512-iFpJ5xhYYhdm//pkrwl8T70Xot6GwK52BBkGGc1XafATTd2wUIBUhK0iZwQfuYup94yZHw9zV/t0bR/qoWanYA==",
   "_location": "/machinepack-sqlserver-adapter",
@@ -13,19 +13,19 @@
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "machinepack-sqlserver-adapter@^1.1.5",
+    "raw": "machinepack-sqlserver-adapter@^1.1.6",
     "name": "machinepack-sqlserver-adapter",
     "escapedName": "machinepack-sqlserver-adapter",
-    "rawSpec": "^1.1.5",
+    "rawSpec": "^1.1.6",
     "saveSpec": null,
-    "fetchSpec": "^1.1.5"
+    "fetchSpec": "^1.1.6"
   },
   "_requiredBy": [
     "/sails-sqlserver-v2"
   ],
-  "_resolved": "https://registry.npmjs.org/machinepack-sqlserver-adapter/-/machinepack-sqlserver-adapter-1.1.5.tgz",
+  "_resolved": "https://registry.npmjs.org/machinepack-sqlserver-adapter/-/machinepack-sqlserver-adapter-1.1.6.tgz",
   "_shasum": "4dc9bc6f9cc81ed939b3c1d2158f461a9b2cd2bb",
-  "_spec": "machinepack-sqlserver-adapter@^1.1.5",
+  "_spec": "machinepack-sqlserver-adapter@^1.1.6",
   "author": {
     "name": "ImoucheG"
   },
@@ -43,8 +43,8 @@
   "deprecated": false,
   "description": "Structured Node.js bindings for SQL Server.",
   "devDependencies": {
-    "eslint": "7.10.0",
-    "mocha": "8.1.3"
+    "eslint": "7.11.0",
+    "mocha": "8.2.0"
   },
   "homepage": "https://github.com/imoucheg/machinepack-sqlserver-adapter#readme",
   "keywords": [
@@ -87,5 +87,5 @@
     "pretest": "npm run lint",
     "test": "node ./node_modules/mocha/bin/mocha --recursive --timeout 10000"
   },
-  "version": "1.1.5"
+  "version": "1.1.6"
 }
