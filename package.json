@@ -2,9 +2,14 @@
   "_from": "machinepack-sqlserver-adapter@^2.0.0",
   "_id": "machinepack-sqlserver-adapter@2.0.0",
   "_inBundle": false,
-  "_integrity": "sha512-06y8vuFlC2FLzsPAucCKb/howQYA5JwvUYDotEd71Vh980C1f1YJnmR5OLNcW/kkflZVv3N6TqdvN3UZl/NMSg==",
+  "_integrity": "sha512-iFpJ5xhYYhdm//pkrwl8T70Xot6GwK52BBkGGc1XafATTd2wUIBUhK0iZwQfuYup94yZHw9zV/t0bR/qoWanYA==",
   "_location": "/machinepack-sqlserver-adapter",
-  "_phantomChildren": {},
+  "_phantomChildren": {
+    "@sailshq/lodash": "3.10.4",
+    "anchor": "1.4.0",
+    "flaverr": "1.10.0",
+    "parley": "3.8.3"
+  },
   "_requested": {
     "type": "range",
     "registry": true,
@@ -19,7 +24,7 @@
     "/sails-sqlserver-v2"
   ],
   "_resolved": "https://registry.npmjs.org/machinepack-sqlserver-adapter/-/machinepack-sqlserver-adapter-2.0.0.tgz",
-  "_shasum": "4875a978e0ca378826e52cec1331fc2916bf8b8d",
+  "_shasum": "4dc9bc6f9cc81ed939b3c1d2158f461a9b2cd2bb",
   "_spec": "machinepack-sqlserver-adapter@^2.0.0",
   "author": {
     "name": "ImoucheG"
