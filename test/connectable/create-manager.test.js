@@ -41,10 +41,11 @@ describe('Connectable ::', function () {
           }
 
           // Assert that the manager has a pool object
-          assert(report.manager.pool);
+          assert(report.manager.pools);
+          assert(report.manager.pools[0]);
 
           // Assert that the manager has a connect function
-          assert(report.manager.pool.connect);
+          assert(report.manager.pools[0].connect);
 
           return done();
         });

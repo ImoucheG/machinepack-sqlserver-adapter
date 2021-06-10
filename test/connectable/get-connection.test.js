@@ -41,7 +41,7 @@ describe('Connectable ::', function () {
           assert(report.connection);
 
           // Assert that the connection has a release function
-          assert(manager.pool.release);
+          assert(report.connection.pool.release);
 
           return done();
         });

@@ -35,7 +35,6 @@ describe('Queryable ::', function () {
           } catch (err2) {
             return done(err2);
           }
-
           return done();
         });
     });
