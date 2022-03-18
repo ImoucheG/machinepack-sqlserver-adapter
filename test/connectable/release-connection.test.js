@@ -1,31 +1,20 @@
-var assert = require('assert');
-var Pack = require('../../');
+const assert = require('assert');
+const Pack = require('../../');
+const configuration = require('../configuration');
 
 describe('Connectable ::', function () {
   describe('Release Connection', function () {
-    var manager;
-    var connection;
-
-    // Create a manager and connection
+    let manager;
+    let connection;
     before(function (done) {
       Pack.createManager({
-        connectionConfig: {
-          user: 'mp',
-          password: 'mp',
-          host: '127.0.0.1\\SQLEXPRESS',
-          database: 'mppg',
-          options: {
-            encrypt: false
-          }
-        }
+        connectionConfig: configuration
       })
         .exec(function (err, report) {
           if (err) {
             return done(err);
           }
-
           manager = report.manager;
-
           Pack.getConnection({
             manager: manager
           })
@@ -33,7 +22,6 @@ describe('Connectable ::', function () {
               if (err) {
                 return done(err);
               }
-
               connection = report.connection;
               return done();
             });
@@ -41,7 +29,6 @@ describe('Connectable ::', function () {
     });
 
     it('should successfully release a connection', function (done) {
-      // Release the connection
       Pack.releaseConnection({
         connection: connection,
         manager: manager
@@ -50,8 +37,6 @@ describe('Connectable ::', function () {
           if (err) {
             return done(err);
           }
-          // Return "done" because the new manager use prepared statement.
-          // When prepared statement is "unprepare" the connection is released
           assert(true);
           return done();
         });

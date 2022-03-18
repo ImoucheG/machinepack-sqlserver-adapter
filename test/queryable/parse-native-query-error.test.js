@@ -1,34 +1,21 @@
-var assert = require('assert');
-var _ = require('@sailshq/lodash');
-var Pack = require('../../index');
+const assert = require('assert');
+const _ = require('@sailshq/lodash');
+const Pack = require('../../index');
+const configuration = require('../configuration');
 
 describe('Queryable ::', function () {
   describe('Parse Native Query Error', function () {
-    var manager;
-    var connection;
-
-    // Create a manager and connection
+    let manager;
+    let connection;
     before(function (done) {
-
       Pack.createManager({
-        connectionConfig: {
-          user: 'mp',
-          password: 'mp',
-          host: '127.0.0.1\\SQLEXPRESS',
-          database: 'mppg',
-          options: {
-            encrypt: false
-          }
-        }
+        connectionConfig: configuration
       })
         .exec(function (err, report) {
           if (err) {
             return done(err);
           }
-
-          // Store the manager
           manager = report.manager;
-
           Pack.getConnection({
             manager: manager
           })
@@ -36,11 +23,7 @@ describe('Queryable ::', function () {
               if (err) {
                 return done(err);
               }
-
-              // Store the connection
               connection = report.connection;
-
-              // Create a table to use for testing
               Pack.sendNativeQuery({
                 connection: connection,
                 manager: manager,
@@ -53,14 +36,11 @@ describe('Queryable ::', function () {
                   if (err) {
                     return done(err);
                   }
-
                   return done();
                 });
             });
         });
     });
-
-    // Afterwards destroy the test table and release the connection
     after(function (done) {
       Pack.sendNativeQuery({
         connection: connection,
@@ -71,7 +51,6 @@ describe('Queryable ::', function () {
           if (err) {
             return done(err);
           }
-
           Pack.releaseConnection({
             connection: connection,
             manager: manager
@@ -80,7 +59,6 @@ describe('Queryable ::', function () {
     });
 
     it('should normalize UNIQUE constraint errors', function (done) {
-      // Insert two records with identical names
       Pack.sendNativeQuery({
         connection: connection,
         manager: manager,
@@ -97,7 +75,6 @@ describe('Queryable ::', function () {
               if (err) {
                 return done(err);
               }
-
               assert(report.footprint);
               assert(report.footprint.identity);
               assert.equal(report.footprint.identity, 'notUnique');

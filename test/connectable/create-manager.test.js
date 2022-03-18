@@ -1,19 +1,12 @@
-var assert = require('assert');
-var Pack = require('../../');
+const assert = require('assert');
+const Pack = require('../../');
+const configuration = require('../configuration');
 
 describe('Connectable ::', function () {
   describe('Create Manager', function () {
     it('should work without a protocol in the connection string', function (done) {
       Pack.createManager({
-        connectionConfig: {
-          user: 'mp',
-          password: 'mp',
-          host: '127.0.0.1\\SQLEXPRESS',
-          database: 'mppg',
-          options: {
-            encrypt: false
-          }
-        }
+        connectionConfig: configuration
       })
         .exec(function (err) {
           if (err) {
@@ -25,28 +18,15 @@ describe('Connectable ::', function () {
 
     it('should successfully return a Pool', function (done) {
       Pack.createManager({
-        connectionConfig: {
-          user: 'mp',
-          password: 'mp',
-          host: '127.0.0.1\\SQLEXPRESS',
-          database: 'mppg',
-          options: {
-            encrypt: false
-          }
-        }
+        connectionConfig: configuration
       })
         .exec(function (err, report) {
           if (err) {
             return done(err);
           }
-
-          // Assert that the manager has a pool object
           assert(report.manager.pools);
           assert(report.manager.pools[0]);
-
-          // Assert that the manager has a connect function
           assert(report.manager.pools[0].connect);
-
           return done();
         });
     });

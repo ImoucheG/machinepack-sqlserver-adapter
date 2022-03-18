@@ -1,5 +1,5 @@
-var assert = require('assert');
-var Pack = require('../../');
+const assert = require('assert');
+const Pack = require('../../');
 
 describe('Queryable ::', function () {
   describe('Compile Statement', function () {
@@ -14,14 +14,12 @@ describe('Queryable ::', function () {
           if (err) {
             return done(err);
           }
-
           assert.equal(report.nativeQuery, 'select [title], [author], [year] from [books]');
           return done();
         });
     });
 
-    // FUTURE: Add lots of checking to the statement compiler
-    it.skip('should return the malformed exit for bad WLQL', function (done) {
+    it('should return the malformed exit for bad WLQL', function (done) {
       Pack.compileStatement({
         statement: {
           foo: 'bar',

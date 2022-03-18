@@ -52,7 +52,7 @@ Thanks to [vijaykonnackal](https://github.com/vijaykonnackal/machinepack-sqlserv
 
 ## License
 
-MIT &copy; 2020-present ImoucheG
+MIT &copy; 2022 ImoucheG
 
 This package, like the [Sails framework](http://sailsjs.com), is free and open-source under the [MIT License](http://sailsjs.com/license).
 
