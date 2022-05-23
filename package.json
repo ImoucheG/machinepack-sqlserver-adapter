@@ -1,6 +1,6 @@
 {
-  "_from": "machinepack-sqlserver-adapter@^3.2.5",
-  "_id": "machinepack-sqlserver-adapter@3.2.5",
+  "_from": "machinepack-sqlserver-adapter@^3.2.6-beta",
+  "_id": "machinepack-sqlserver-adapter@3.2.6-beta",
   "_inBundle": false,
   "_integrity": "sha512-iFpJ5xhYYhdm//pkrwl8T70Xot6GwK52BBkGGc1XafATTd2wUIBUhK0iZwQfuYup94yZHw9zV/t0bR/qoWanYA==",
   "_location": "/machinepack-sqlserver-adapter",
@@ -13,19 +13,19 @@
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "machinepack-sqlserver-adapter@^3.2.5",
+    "raw": "machinepack-sqlserver-adapter@^3.2.6-beta",
     "name": "machinepack-sqlserver-adapter",
     "escapedName": "machinepack-sqlserver-adapter",
-    "rawSpec": "^3.2.5",
+    "rawSpec": "^3.2.6-beta",
     "saveSpec": null,
-    "fetchSpec": "^3.2.5"
+    "fetchSpec": "^3.2.6-beta"
   },
   "_requiredBy": [
     "/sails-sqlserver-v2"
   ],
-  "_resolved": "https://registry.npmjs.org/machinepack-sqlserver-adapter/-/machinepack-sqlserver-adapter-3.2.5.tgz",
+  "_resolved": "https://registry.npmjs.org/machinepack-sqlserver-adapter/-/machinepack-sqlserver-adapter-3.2.6-beta.tgz",
   "_shasum": "4dc9bc6f9cc81ed939b3c1d2158f461a9b2cd2bb",
-  "_spec": "machinepack-sqlserver-adapter@^3.2.5",
+  "_spec": "machinepack-sqlserver-adapter@^3.2.6-beta",
   "author": {
     "name": "ImoucheG"
   },
@@ -37,14 +37,14 @@
     "@sailshq/lodash": "^3.10.4",
     "debug": "4.3.4",
     "machine": "^15.2.2",
-    "mssql": "^8.1.0",
+    "mssql": "^8.1.1",
     "waterline-sql-builder": "^2.0.0"
   },
   "deprecated": false,
   "description": "Structured Node.js bindings for SQL Server.",
   "devDependencies": {
-    "eslint": "8.13.0",
-    "mocha": "9.2.2"
+    "eslint": "8.16.0",
+    "mocha": "10.0.0"
   },
   "homepage": "https://github.com/imoucheg/machinepack-sqlserver-adapter#readme",
   "keywords": [
@@ -87,5 +87,5 @@
     "pretest": "npm run lint",
     "test": "node ./node_modules/mocha/bin/mocha --recursive --timeout 10000"
   },
-  "version": "3.2.5"
+  "version": "3.2.6-beta"
 }

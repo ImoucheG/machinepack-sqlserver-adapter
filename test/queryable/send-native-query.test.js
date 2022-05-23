@@ -52,7 +52,16 @@ describe('Queryable ::', function () {
                       if (err) {
                         return done(err);
                       }
-                      return done();
+                      Pack.createManager({
+                        connectionConfig: configuration
+                      })
+                        .exec(function (err, report) {
+                          if (err) {
+                            return done(err);
+                          }
+                          manager = report.manager;
+                          return done();
+                        });
                     });
                 });
             });
