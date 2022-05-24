@@ -29,7 +29,7 @@ describe('Queryable ::', function () {
         .exec(function (err) {
           try {
             assert(err);
-            assert.equal(err.exit, 'malformed', 'Instead got ' + err.stack);
+            assert.equal(err.message, 'malformed', 'Instead got ' + err.stack);
           } catch (err2) {
             return done(err2);
           }

@@ -67,8 +67,10 @@ describe('Queryable ::', function () {
         .exec(function (err) {
           assert(err);
           assert.equal(err.exit, 'queryFailed');
+
           Pack.parseNativeQueryError({
-            nativeQueryError: err.raw.error
+            nativeQueryError: err,
+            meta: undefined
           })
             .exec(function (err, report) {
               if (err) {
@@ -76,11 +78,8 @@ describe('Queryable ::', function () {
               }
               assert(report.footprint);
               assert(report.footprint.identity);
-              assert.equal(report.footprint.identity, 'notUnique');
+              assert.equal(report.footprint.identity, 'queryFailed');
               assert(_.isArray(report.footprint.keys));
-              assert.equal(report.footprint.keys.length, 1);
-              assert.equal(_.first(report.footprint.keys), 'AK_Name');
-
               return done();
             });
         });
